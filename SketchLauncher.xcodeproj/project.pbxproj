@@ -1,0 +1,382 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D2523BD42347F8FE00B83EBB /* SketchOverrides.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = D2523BCF2347F39500B83EBB /* SketchOverrides.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D2530B142347F2EB00B88410 /* app.icns in Resources */ = {isa = PBXBuildFile; fileRef = D2530B132347F2EB00B88410 /* app.icns */; };
+		FA130E6416806E36002E4BF9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA130E6316806E36002E4BF9 /* Cocoa.framework */; };
+		FA130E7016806E36002E4BF9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA130E6F16806E36002E4BF9 /* main.m */; };
+		FA130E7716806E36002E4BF9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA130E7616806E36002E4BF9 /* AppDelegate.m */; };
+		FA130E7A16806E36002E4BF9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA130E7816806E36002E4BF9 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D2523BCE2347F39500B83EBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA88A09C1680721300915B81 /* SketchOverrides.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FA88A0821680711D00915B81;
+			remoteInfo = SketchOverrides;
+		};
+		D2523BD12347F8E900B83EBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA88A09C1680721300915B81 /* SketchOverrides.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FA88A0811680711D00915B81;
+			remoteInfo = SketchOverrides;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D2523BD32347F8F600B83EBB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				D2523BD42347F8FE00B83EBB /* SketchOverrides.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D2530B122347F23200B88410 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		D2530B132347F2EB00B88410 /* app.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = app.icns; sourceTree = "<group>"; };
+		FA130E5F16806E36002E4BF9 /* SketchLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SketchLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA130E6316806E36002E4BF9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		FA130E6616806E36002E4BF9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		FA130E6816806E36002E4BF9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FA130E6B16806E36002E4BF9 /* SketchLauncher-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SketchLauncher-Info.plist"; sourceTree = "<group>"; };
+		FA130E6F16806E36002E4BF9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FA130E7516806E36002E4BF9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FA130E7616806E36002E4BF9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FA88A09C1680721300915B81 /* SketchOverrides.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SketchOverrides.xcodeproj; path = CalculatorOverrides/SketchOverrides.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA130E5C16806E36002E4BF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA130E6416806E36002E4BF9 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D2523BCB2347F39400B83EBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2523BCF2347F39500B83EBB /* SketchOverrides.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA130E5416806E36002E4BF9 = {
+			isa = PBXGroup;
+			children = (
+				FA130E6916806E36002E4BF9 /* CalculatorLauncher */,
+				FA130E6216806E36002E4BF9 /* Frameworks */,
+				FA130E6016806E36002E4BF9 /* Products */,
+				FA88A09C1680721300915B81 /* SketchOverrides.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		FA130E6016806E36002E4BF9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA130E5F16806E36002E4BF9 /* SketchLauncher.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA130E6216806E36002E4BF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA130E6816806E36002E4BF9 /* Foundation.framework */,
+				FA130E6616806E36002E4BF9 /* AppKit.framework */,
+				FA130E6316806E36002E4BF9 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA130E6916806E36002E4BF9 /* CalculatorLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				FA130E7516806E36002E4BF9 /* AppDelegate.h */,
+				FA130E7616806E36002E4BF9 /* AppDelegate.m */,
+				FA130E7816806E36002E4BF9 /* MainMenu.xib */,
+				FA130E6A16806E36002E4BF9 /* Supporting Files */,
+			);
+			path = CalculatorLauncher;
+			sourceTree = "<group>";
+		};
+		FA130E6A16806E36002E4BF9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2530B132347F2EB00B88410 /* app.icns */,
+				FA130E6B16806E36002E4BF9 /* SketchLauncher-Info.plist */,
+				FA130E6F16806E36002E4BF9 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA130E5E16806E36002E4BF9 /* SketchLauncher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA130E7D16806E36002E4BF9 /* Build configuration list for PBXNativeTarget "SketchLauncher" */;
+			buildPhases = (
+				FA130E5B16806E36002E4BF9 /* Sources */,
+				FA130E5C16806E36002E4BF9 /* Frameworks */,
+				FA130E5D16806E36002E4BF9 /* Resources */,
+				D2523BD32347F8F600B83EBB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2523BD22347F8E900B83EBB /* PBXTargetDependency */,
+			);
+			name = SketchLauncher;
+			productName = CalculatorLauncher;
+			productReference = FA130E5F16806E36002E4BF9 /* SketchLauncher.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA130E5616806E36002E4BF9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "";
+			};
+			buildConfigurationList = FA130E5916806E36002E4BF9 /* Build configuration list for PBXProject "SketchLauncher" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA130E5416806E36002E4BF9;
+			productRefGroup = FA130E6016806E36002E4BF9 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D2523BCB2347F39400B83EBB /* Products */;
+					ProjectRef = FA88A09C1680721300915B81 /* SketchOverrides.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				FA130E5E16806E36002E4BF9 /* SketchLauncher */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D2523BCF2347F39500B83EBB /* SketchOverrides.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = SketchOverrides.dylib;
+			remoteRef = D2523BCE2347F39500B83EBB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA130E5D16806E36002E4BF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2530B142347F2EB00B88410 /* app.icns in Resources */,
+				FA130E7A16806E36002E4BF9 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA130E5B16806E36002E4BF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA130E7016806E36002E4BF9 /* main.m in Sources */,
+				FA130E7716806E36002E4BF9 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D2523BD22347F8E900B83EBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SketchOverrides;
+			targetProxy = D2523BD12347F8E900B83EBB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA130E7816806E36002E4BF9 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2530B122347F23200B88410 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA130E7B16806E36002E4BF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
+			};
+			name = Debug;
+		};
+		FA130E7C16806E36002E4BF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
+			};
+			name = Release;
+		};
+		FA130E7E16806E36002E4BF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = "CalculatorLauncher/SketchLauncher-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.organization;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FA130E7F16806E36002E4BF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = "CalculatorLauncher/SketchLauncher-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.organization;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA130E5916806E36002E4BF9 /* Build configuration list for PBXProject "SketchLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA130E7B16806E36002E4BF9 /* Debug */,
+				FA130E7C16806E36002E4BF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA130E7D16806E36002E4BF9 /* Build configuration list for PBXNativeTarget "SketchLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA130E7E16806E36002E4BF9 /* Debug */,
+				FA130E7F16806E36002E4BF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA130E5616806E36002E4BF9 /* Project object */;
+}
