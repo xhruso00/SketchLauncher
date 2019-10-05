@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D2530B142347F2EB00B88410 /* app.icns in Resources */ = {isa = PBXBuildFile; fileRef = D2530B132347F2EB00B88410 /* app.icns */; };
+		D2DB5B912348A33F003B6B50 /* SketchOverrides.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = D2DB5B8E23489737003B6B50 /* SketchOverrides.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FA130E6416806E36002E4BF9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA130E6316806E36002E4BF9 /* Cocoa.framework */; };
 		FA130E7016806E36002E4BF9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA130E6F16806E36002E4BF9 /* main.m */; };
 		FA130E7716806E36002E4BF9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA130E7616806E36002E4BF9 /* AppDelegate.m */; };
@@ -22,6 +23,13 @@
 			remoteGlobalIDString = FA88A0821680711D00915B81;
 			remoteInfo = SketchOverrides;
 		};
+		D2DB5B8F2348A339003B6B50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA88A09C1680721300915B81 /* SketchOverrides.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FA88A0811680711D00915B81;
+			remoteInfo = SketchOverrides;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +39,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				D2DB5B912348A33F003B6B50 /* SketchOverrides.dylib in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +143,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D2DB5B902348A339003B6B50 /* PBXTargetDependency */,
 			);
 			name = SketchLauncher;
 			productName = CalculatorLauncher;
@@ -206,6 +216,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D2DB5B902348A339003B6B50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SketchOverrides;
+			targetProxy = D2DB5B8F2348A339003B6B50 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FA130E7816806E36002E4BF9 /* MainMenu.xib */ = {

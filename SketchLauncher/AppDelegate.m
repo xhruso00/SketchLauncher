@@ -1,5 +1,7 @@
 #import "AppDelegate.h"
 
+static NSString *const kSketchBundleIdentifier = @"com.bohemiancoding.sketch3";
+
 @implementation AppDelegate
 
 - (void)dealloc
@@ -27,32 +29,25 @@
         // Run Sketch.app and inject our dynamic library
         NSString *dyldLibrary = [[NSBundle bundleForClass:[self class]] pathForResource:@"SketchOverrides" ofType:@"dylib"];
         NSString *launcherString = [NSString stringWithFormat:@"DYLD_INSERT_LIBRARIES=\"%@\" \"%@\" &", dyldLibrary, inPath];
+        
         system([launcherString UTF8String]);
         
         // Bring it to front after a delay
-        [self performSelector:@selector(bringToFrontApplicationWithBundleIdentifier:) withObject:inBundleIdentifier afterDelay:1.0];
+        dispatch_time_t delay = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC));
+        dispatch_after(delay, dispatch_get_main_queue(), ^{
+            [self bringToFrontApplicationWithBundleIdentifier:inBundleIdentifier];
+        });
     }
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    NSString *bundleIdentifier = @"com.bohemiancoding.sketch3";
-    NSArray<NSURL*>*possibleAppURLs = (NSArray *)LSCopyApplicationURLsForBundleIdentifier((CFStringRef)bundleIdentifier, NULL);
-    __block NSString *path;
-    [possibleAppURLs enumerateObjectsUsingBlock:^(NSURL *obj, NSUInteger idx, BOOL *stop) {
-        if ([[obj path] containsString:@"Sketch.app"]) {
-            *stop = YES;
-            path = [[obj path] copy];
-        }
-    }];
-    path = [path stringByAppendingString:@"/Contents/MacOS/Sketch"];
-    if([[NSFileManager defaultManager] fileExistsAtPath:path]) {
-        [self launchApplicationWithPath:path andBundleIdentifier:bundleIdentifier];
-    } else {
-        NSString *sketchPath = @"/Applications/Sketch.app/Contents/MacOS/Sketch";
-        if ([[NSFileManager defaultManager] fileExistsAtPath:sketchPath]) {
-            [self launchApplicationWithPath:sketchPath andBundleIdentifier:bundleIdentifier];
-        }
+    NSString *bundleIdentifier = kSketchBundleIdentifier;
+    NSURL *appURL = [[NSWorkspace sharedWorkspace] URLForApplicationWithBundleIdentifier:bundleIdentifier];
+    NSBundle *bundle = [NSBundle bundleWithURL:appURL];
+    NSString *executablePath = [bundle executablePath];
+    if([[NSFileManager defaultManager] fileExistsAtPath:executablePath]) {
+        [self launchApplicationWithPath:executablePath andBundleIdentifier:bundleIdentifier];
     }
 }
 
