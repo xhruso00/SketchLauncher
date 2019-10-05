@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D2523BD42347F8FE00B83EBB /* SketchOverrides.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = D2523BCF2347F39500B83EBB /* SketchOverrides.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D2530B142347F2EB00B88410 /* app.icns in Resources */ = {isa = PBXBuildFile; fileRef = D2530B132347F2EB00B88410 /* app.icns */; };
 		FA130E6416806E36002E4BF9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA130E6316806E36002E4BF9 /* Cocoa.framework */; };
 		FA130E7016806E36002E4BF9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA130E6F16806E36002E4BF9 /* main.m */; };
@@ -16,18 +15,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D2523BCE2347F39500B83EBB /* PBXContainerItemProxy */ = {
+		D2DB5B8D23489737003B6B50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FA88A09C1680721300915B81 /* SketchOverrides.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = FA88A0821680711D00915B81;
-			remoteInfo = SketchOverrides;
-		};
-		D2523BD12347F8E900B83EBB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA88A09C1680721300915B81 /* SketchOverrides.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = FA88A0811680711D00915B81;
 			remoteInfo = SketchOverrides;
 		};
 /* End PBXContainerItemProxy section */
@@ -39,7 +31,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				D2523BD42347F8FE00B83EBB /* SketchOverrides.dylib in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +47,7 @@
 		FA130E6F16806E36002E4BF9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA130E7516806E36002E4BF9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FA130E7616806E36002E4BF9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FA88A09C1680721300915B81 /* SketchOverrides.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SketchOverrides.xcodeproj; path = CalculatorOverrides/SketchOverrides.xcodeproj; sourceTree = "<group>"; };
+		FA88A09C1680721300915B81 /* SketchOverrides.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SketchOverrides.xcodeproj; path = SketchOverrides/SketchOverrides.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,10 +62,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D2523BCB2347F39400B83EBB /* Products */ = {
+		D2DB5B8A23489737003B6B50 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2523BCF2347F39500B83EBB /* SketchOverrides.dylib */,
+				D2DB5B8E23489737003B6B50 /* SketchOverrides.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,7 +73,7 @@
 		FA130E5416806E36002E4BF9 = {
 			isa = PBXGroup;
 			children = (
-				FA130E6916806E36002E4BF9 /* CalculatorLauncher */,
+				FA130E6916806E36002E4BF9 /* SketchLauncher */,
 				FA130E6216806E36002E4BF9 /* Frameworks */,
 				FA130E6016806E36002E4BF9 /* Products */,
 				FA88A09C1680721300915B81 /* SketchOverrides.xcodeproj */,
@@ -107,7 +98,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FA130E6916806E36002E4BF9 /* CalculatorLauncher */ = {
+		FA130E6916806E36002E4BF9 /* SketchLauncher */ = {
 			isa = PBXGroup;
 			children = (
 				FA130E7516806E36002E4BF9 /* AppDelegate.h */,
@@ -115,7 +106,7 @@
 				FA130E7816806E36002E4BF9 /* MainMenu.xib */,
 				FA130E6A16806E36002E4BF9 /* Supporting Files */,
 			);
-			path = CalculatorLauncher;
+			path = SketchLauncher;
 			sourceTree = "<group>";
 		};
 		FA130E6A16806E36002E4BF9 /* Supporting Files */ = {
@@ -143,7 +134,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				D2523BD22347F8E900B83EBB /* PBXTargetDependency */,
 			);
 			name = SketchLauncher;
 			productName = CalculatorLauncher;
@@ -172,7 +162,7 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = D2523BCB2347F39400B83EBB /* Products */;
+					ProductGroup = D2DB5B8A23489737003B6B50 /* Products */;
 					ProjectRef = FA88A09C1680721300915B81 /* SketchOverrides.xcodeproj */;
 				},
 			);
@@ -184,11 +174,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		D2523BCF2347F39500B83EBB /* SketchOverrides.dylib */ = {
+		D2DB5B8E23489737003B6B50 /* SketchOverrides.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
 			path = SketchOverrides.dylib;
-			remoteRef = D2523BCE2347F39500B83EBB /* PBXContainerItemProxy */;
+			remoteRef = D2DB5B8D23489737003B6B50 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -216,14 +206,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D2523BD22347F8E900B83EBB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SketchOverrides;
-			targetProxy = D2523BD12347F8E900B83EBB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FA130E7816806E36002E4BF9 /* MainMenu.xib */ = {
@@ -334,7 +316,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				INFOPLIST_FILE = "CalculatorLauncher/SketchLauncher-Info.plist";
+				INFOPLIST_FILE = "SketchLauncher/SketchLauncher-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.organization;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -348,7 +330,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				INFOPLIST_FILE = "CalculatorLauncher/SketchLauncher-Info.plist";
+				INFOPLIST_FILE = "SketchLauncher/SketchLauncher-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.organization;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
