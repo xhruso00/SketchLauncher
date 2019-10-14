@@ -1,38 +1,62 @@
 #import "AppDelegate.h"
+#import "Application.h"
+#import "LaunchWC.h"
 
 static NSString *const kAppToLaunchBundleIdentifier = @"com.bohemiancoding.sketch3";
+
+@interface AppDelegate()
+@property (nonatomic) LaunchWC *launchWC;
+@property (nonatomic) NSArray<Application*>*applications;
+@end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    NSURL *appURL = [[NSWorkspace sharedWorkspace] URLForApplicationWithBundleIdentifier:kAppToLaunchBundleIdentifier];
-    NSBundle *bundle = [NSBundle bundleWithURL:appURL];
-    NSString *executablePath = [bundle executablePath];
-    if ([[NSFileManager defaultManager] fileExistsAtPath:executablePath] == NO) {
-        NSLog(@"++++++ NO EXECUTABLE FOUND: %@ ++++", executablePath);
-        return;
-    }
-    NSString *dyldLibrary = [[[NSBundle mainBundle] pathsForResourcesOfType:@"dylib" inDirectory:nil] firstObject];
-    if (dyldLibrary) {
-        [self launchApplicationWithInjectionPath:dyldLibrary];
-    }
+    if ([self moreThanOneAppExists] == NO) {
+        Application *app = [[self applications] firstObject];
+        if (app) {
+            [app launch];
+        } else {
+            NSLog(@"++++++ NO APP FOUND: %@ ++++", kAppToLaunchBundleIdentifier);
+            return;
+        }
+    } else {
+        [[self launchWC] showWindow:self];
+    }   
 }
 
--(void)launchApplicationWithInjectionPath:(NSString *)dyldLibraryPath
+- (BOOL)moreThanOneAppExists
 {
-    // Run xxx.app and inject our dynamic library
-    NSError *error;
-    NSURL *appURL = [[NSWorkspace sharedWorkspace] URLForApplicationWithBundleIdentifier:kAppToLaunchBundleIdentifier];
-    NSDictionary *env = @{@"DYLD_INSERT_LIBRARIES" : dyldLibraryPath};
-    NSRunningApplication *runningApplication = [[NSWorkspace sharedWorkspace] launchApplicationAtURL:appURL options:NSWorkspaceLaunchAsync configuration:@{NSWorkspaceLaunchConfigurationEnvironment : env} error:&error];
-    
-    // Bring it to front after a delay
-    dispatch_time_t delay = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC));
-    dispatch_after(delay, dispatch_get_main_queue(), ^{
-        [runningApplication activateWithOptions:NSApplicationActivateIgnoringOtherApps];
-        [[NSApplication sharedApplication] terminate:self];
-    });
+    return [[self applications] count] > 1;
 }
+
+- (NSArray<Application*>*)applications
+{
+    if (_applications == nil) {
+        CFErrorRef error;
+        CFArrayRef URLs = LSCopyApplicationURLsForBundleIdentifier((CFStringRef)kAppToLaunchBundleIdentifier, &error);
+        NSUInteger numberOfURLs = CFArrayGetCount(URLs);
+        NSMutableArray<Application*>*apps = [NSMutableArray new];
+        for (int idx = 0; idx < numberOfURLs; idx++) {
+            NSURL *URL = (NSURL *)CFArrayGetValueAtIndex(URLs, idx);
+            Application *app = [[Application alloc] initWithBundleURL:URL];
+            [apps addObject:app];
+        }
+        CFRelease(URLs);
+        _applications = apps;
+    }
+    return _applications;
+}
+
+- (LaunchWC *)launchWC
+{
+    if (_launchWC == nil) {
+        _launchWC = [[LaunchWC alloc] init];
+        [_launchWC setApplications:[self applications]];
+    }
+    return _launchWC;
+}
+
 
 @end
