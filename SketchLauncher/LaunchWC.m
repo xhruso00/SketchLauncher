@@ -32,9 +32,9 @@ static NSNibName kLaunchWindowName = @"Launch";
     return [[[self arrayController] selectedObjects] firstObject];
 }
 
-- (IBAction)tableViewDoubleAction:(id)sender
+- (IBAction)tableViewDoubleAction:(NSArray<Application*>*)applications
 {
-    [self launchSelectedApplication];
+    [self launchApplication:[applications firstObject]];
 }
 
 - (void)launchSelectedApplication

@@ -66,7 +66,7 @@
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <tableColumns>
-                                        <tableColumn width="71.5" minWidth="10" maxWidth="3.4028234663852886e+38" id="rMl-6h-XQg">
+                                        <tableColumn editable="NO" width="71.5" minWidth="10" maxWidth="3.4028234663852886e+38" id="rMl-6h-XQg">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="App Name">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -82,7 +82,7 @@
                                                 <binding destination="3le-cI-47p" name="value" keyPath="arrangedObjects.appName" id="Tzk-4m-blW"/>
                                             </connections>
                                         </tableColumn>
-                                        <tableColumn width="64" minWidth="10" maxWidth="3.4028234663852886e+38" id="pbv-z6-kpg">
+                                        <tableColumn editable="NO" width="64" minWidth="10" maxWidth="3.4028234663852886e+38" id="pbv-z6-kpg">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Version">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -98,7 +98,7 @@
                                                 <binding destination="3le-cI-47p" name="value" keyPath="arrangedObjects.shortVersion" id="sRX-dO-K5p"/>
                                             </connections>
                                         </tableColumn>
-                                        <tableColumn width="262.5" minWidth="10" maxWidth="3.4028234663852886e+38" id="abF-YU-rXU">
+                                        <tableColumn editable="NO" width="262.5" minWidth="10" maxWidth="3.4028234663852886e+38" id="abF-YU-rXU">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Path">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -116,8 +116,17 @@
                                         </tableColumn>
                                     </tableColumns>
                                     <connections>
-                                        <action trigger="doubleAction" selector="tableViewDoubleAction:" target="-2" id="kEm-be-1yd"/>
                                         <binding destination="3le-cI-47p" name="content" keyPath="arrangedObjects" id="z4A-Rg-Ud3"/>
+                                        <binding destination="3le-cI-47p" name="doubleClickArgument" keyPath="selectedObjects" id="tiq-PF-gXM">
+                                            <dictionary key="options">
+                                                <string key="NSSelectorName">tableViewDoubleAction:</string>
+                                            </dictionary>
+                                        </binding>
+                                        <binding destination="-2" name="doubleClickTarget" keyPath="self" previousBinding="tiq-PF-gXM" id="HBT-gb-sWh">
+                                            <dictionary key="options">
+                                                <string key="NSSelectorName">tableViewDoubleAction:</string>
+                                            </dictionary>
+                                        </binding>
                                         <binding destination="3le-cI-47p" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="z4A-Rg-Ud3" id="ccb-R0-dQ4"/>
                                     </connections>
                                 </tableView>
