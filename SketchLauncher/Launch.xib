@@ -59,7 +59,7 @@
                             <rect key="frame" x="1" y="0.0" width="407" height="146"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="XYN-jF-fSj" id="KmY-vt-DrD">
+                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" headerView="XYN-jF-fSj" id="KmY-vt-DrD">
                                     <rect key="frame" x="0.0" y="0.0" width="407" height="121"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
@@ -77,6 +77,7 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <sortDescriptor key="sortDescriptorPrototype" selector="localizedCaseInsensitiveCompare:" sortKey="appName"/>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                             <connections>
                                                 <binding destination="3le-cI-47p" name="value" keyPath="arrangedObjects.appName" id="Tzk-4m-blW"/>
@@ -93,6 +94,7 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <sortDescriptor key="sortDescriptorPrototype" selector="localizedCaseInsensitiveCompare:" sortKey="shortVersion"/>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                             <connections>
                                                 <binding destination="3le-cI-47p" name="value" keyPath="arrangedObjects.shortVersion" id="sRX-dO-K5p"/>
@@ -109,6 +111,7 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <sortDescriptor key="sortDescriptorPrototype" selector="localizedCaseInsensitiveCompare:" sortKey="path"/>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                             <connections>
                                                 <binding destination="3le-cI-47p" name="value" keyPath="arrangedObjects.path" id="5EQ-Jl-aX4"/>
@@ -122,12 +125,15 @@
                                                 <string key="NSSelectorName">tableViewDoubleAction:</string>
                                             </dictionary>
                                         </binding>
+                                        <binding destination="3le-cI-47p" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="z4A-Rg-Ud3" id="ccb-R0-dQ4"/>
                                         <binding destination="-2" name="doubleClickTarget" keyPath="self" previousBinding="tiq-PF-gXM" id="HBT-gb-sWh">
                                             <dictionary key="options">
                                                 <string key="NSSelectorName">tableViewDoubleAction:</string>
                                             </dictionary>
                                         </binding>
-                                        <binding destination="3le-cI-47p" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="z4A-Rg-Ud3" id="ccb-R0-dQ4"/>
+                                        <binding destination="3le-cI-47p" name="sortDescriptors" keyPath="sortDescriptors" previousBinding="ccb-R0-dQ4" id="4HP-fz-jJq"/>
+                                        <outlet property="dataSource" destination="-2" id="wF9-TP-pGr"/>
+                                        <outlet property="delegate" destination="-2" id="a3F-rz-Icd"/>
                                     </connections>
                                 </tableView>
                             </subviews>
@@ -161,7 +167,13 @@
             </view>
             <point key="canvasLocation" x="82.5" y="54"/>
         </window>
-        <arrayController selectsInsertedObjects="NO" avoidsEmptySelection="NO" id="3le-cI-47p" userLabel="Applications"/>
+        <arrayController objectClassName="Application" selectsInsertedObjects="NO" avoidsEmptySelection="NO" id="3le-cI-47p" userLabel="Applications">
+            <declaredKeys>
+                <string>appName</string>
+                <string>shortVersion</string>
+                <string>path</string>
+            </declaredKeys>
+        </arrayController>
     </objects>
     <resources>
         <image name="NSApplicationIcon" width="32" height="32"/>

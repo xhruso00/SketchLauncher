@@ -47,4 +47,10 @@ static NSNibName kLaunchWindowName = @"Launch";
     [application launch];
 }
 
+#pragma mark NSTableViewDelegate
+- (void)tableView:(NSTableView *)tableView sortDescriptorsDidChange:(NSArray<NSSortDescriptor *> *)oldDescriptors
+{
+    
+}
+
 @end
